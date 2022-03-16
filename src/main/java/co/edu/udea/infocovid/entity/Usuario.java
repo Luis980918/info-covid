@@ -32,6 +32,9 @@ public class Usuario {
     @Column(name = "fk_ciudad_cliente")
     private Long fkCiudadCliente;
 
+    @Column(name = "nombre_de_usuario")
+    private String userName;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_ciudad_cliente", insertable = false, updatable = false)
     private Ciudad ciudadCliente;
@@ -109,5 +112,13 @@ public class Usuario {
 
     public void setUsuarioList(List<Suscripcion> usuarioList) {
         this.usuarioList = usuarioList;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
