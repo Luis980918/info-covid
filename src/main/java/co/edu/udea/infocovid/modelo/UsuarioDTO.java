@@ -19,6 +19,7 @@ public class UsuarioDTO {
     private Long fkCiudadCliente;
     private Ciudad ciudadCliente;
     private Long idSuscripcion;
+    private String userName;
 
     public Long getId() {
         return id;
@@ -90,5 +91,13 @@ public class UsuarioDTO {
 
     public void setIdSuscripcion(Long idSuscripcion) {
         this.idSuscripcion = idSuscripcion;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
