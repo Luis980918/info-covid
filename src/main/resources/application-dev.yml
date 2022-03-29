@@ -13,7 +13,17 @@ spring:
         default_schema: public
         temp:
           use_jdbc_metadata_default: false
-
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: luisc.rendonc@gmail.com
+    password: pjodygeshrbnyxti
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/covid_info
