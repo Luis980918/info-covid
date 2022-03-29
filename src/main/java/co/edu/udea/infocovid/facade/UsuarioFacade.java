@@ -37,6 +37,11 @@ public class UsuarioFacade {
         return usuarioMapper.toDto(usuario);
     }
 
+    public UsuarioDTO buscarUsuarioPorId(Long id) {
+        Usuario usuario = usuarioService.buscarUsuario(id);
+        return usuarioMapper.toDto(usuario);
+    }
+
     public void reenviarClavePorEmail(String correo) {
         usuarioService.reenviarClavePorEmail(correo);
     }

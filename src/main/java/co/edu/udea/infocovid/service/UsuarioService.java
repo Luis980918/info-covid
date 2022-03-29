@@ -62,6 +62,11 @@ public class UsuarioService {
         }
         return usuarioConsulta;
     }
+
+    public Usuario buscarUsuario(Long id) {
+        return usuarioRepository.findById(id).orElseThrow(
+                () -> new BusinessException(messages.get("usuario.correo.no_encontrado")));
+    }
     
     public void reenviarClavePorEmail(String correo) {
         SimpleMailMessage message = new SimpleMailMessage();
