@@ -8,6 +8,7 @@ import co.edu.udea.infocovid.util.StandardResponse;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,7 +34,19 @@ public class UsuarioController {
             @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
     public ResponseEntity<StandardResponse<UsuarioDTO>> guardarUsuario(@RequestBody UsuarioDTO user) {
         UsuarioDTO userDto = usuarioFacade.crearUsuario(user);
-        return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK, userDto));    }
+        return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK, userDto));    
+    }
+
+    @PutMapping("actualizar-usuario")
+    @ApiOperation(value = "Permite actualizar un usuario", response = UsuarioDTO.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Se actualizó el usuario exitosamente"),
+            @ApiResponse(code = 400, message = "La petición es inválida"),
+            @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
+    public ResponseEntity<StandardResponse<UsuarioDTO>> actualizarUsuario(@RequestBody UsuarioDTO user) {
+        UsuarioDTO userDto = usuarioFacade.actualizar(user);
+        return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK, userDto));
+    }
 
     @GetMapping("iniciar-sesion/{correo}/{contrasena}")
     @ApiOperation(value = "Permite verificar la información del usuario para iniciar sesión", response = UsuarioDTO.class)
@@ -45,4 +58,32 @@ public class UsuarioController {
         UsuarioDTO usuarioDTO = usuarioFacade.verificarInformacionInicioSesion(correo, contrasena);
         return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK, usuarioDTO));
     }
+
+    @GetMapping("buscar-usuario/{id}")
+    @ApiOperation(value = "Permite consultar un usuario por medio de su id", response = UsuarioDTO.class)
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Usuario consultado correctamente"),
+            @ApiResponse(code = 400, message = "La petición es inválida"),
+            @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
+    public ResponseEntity<StandardResponse<UsuarioDTO>> buscarUsuarioPorId(@PathVariable Long id) {
+        UsuarioDTO usuarioDTO = usuarioFacade.buscarUsuarioPorId(id);
+        return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK, usuarioDTO));
+    }
+
+    @PostMapping("recuperar-clave/{correo}")
+    @ApiOperation(value = "Permite recuperar la clave establecida por el usuario")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "Se envió el correo de verificación correctamente"),
+            @ApiResponse(code = 400, message = "La petición es inválida"),
+            @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
+    public ResponseEntity<StandardResponse> reenviarClavePorCorreo(@PathVariable String correo) {
+        try {
+            usuarioFacade.reenviarClavePorEmail(correo);
+            return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK));
+        }catch (Exception e) {
+            return new ResponseEntity<>(new StandardResponse<>(StandardResponse.StatusStandardResponse.ERROR,
+                    e.getMessage()), HttpStatus.CONFLICT);
+        }
+    }
+    
 }
