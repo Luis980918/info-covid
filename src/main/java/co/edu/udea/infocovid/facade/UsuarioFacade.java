@@ -27,9 +27,17 @@ public class UsuarioFacade {
     public UsuarioDTO crearUsuario(UsuarioDTO usuarioDTO) {
         return usuarioMapper.toDto(usuarioService.guardarUsuario(usuarioMapper.toEntity(usuarioDTO)));
     }
+    
+    public UsuarioDTO actualizar(UsuarioDTO usuarioDTO) {
+        return usuarioMapper.toDto(usuarioService.actualizarUsuario(usuarioMapper.toEntity(usuarioDTO)));
+    }
 
     public UsuarioDTO verificarInformacionInicioSesion(String correo, String contrasena) {
         Usuario usuario = usuarioService.buscarUsuario(correo, contrasena);
         return usuarioMapper.toDto(usuario);
+    }
+
+    public void reenviarClavePorEmail(String correo) {
+        usuarioService.reenviarClavePorEmail(correo);
     }
 }
