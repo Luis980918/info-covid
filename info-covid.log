@@ -1,41 +1,36 @@
-2022-02-28 18:27:23.264  INFO 32304 --- [main] co.edu.udea.infocovid.App                : The following profiles are active: heroku
-2022-02-28 18:27:24.009  INFO 32304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2022-02-28 18:27:24.125  INFO 32304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103ms. Found 6 repository interfaces.
-2022-02-28 18:27:24.349  INFO 32304 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1d2e059a-7a65-3adf-8de0-443a7dd0c85e
-2022-02-28 18:27:24.421  INFO 32304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e478a43b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-28 18:27:24.444  INFO 32304 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$92a738] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2022-02-28 18:27:24.652  INFO 32304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-02-28 18:27:24.673  INFO 32304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-02-28 18:27:24.673  INFO 32304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2022-02-28 18:27:24.835  INFO 32304 --- [main] o.a.c.c.C.[.[.[/info-covid-api]          : Initializing Spring embedded WebApplicationContext
-2022-02-28 18:27:24.836  INFO 32304 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1554 ms
-2022-02-28 18:27:25.078  WARN 32304 --- [main] com.zaxxer.hikari.HikariConfig           : {} - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
-2022-02-28 18:27:25.078  INFO 32304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-02-28 18:27:27.131  INFO 32304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-02-28 18:27:27.192  INFO 32304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2022-04-04 18:52:39.618  INFO 35352 --- [main] co.edu.udea.infocovid.App                : Starting App on DESKTOP-SF5NH44 with PID 35352 (started by EQ01 in C:\Users\EQ01\Documents\Proyecto integrador\info-covid)
+2022-04-04 18:52:39.624  INFO 35352 --- [main] co.edu.udea.infocovid.App                : The following profiles are active: heroku
+2022-04-04 18:52:40.597  INFO 35352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-04 18:52:40.722  INFO 35352 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108ms. Found 6 repository interfaces.
+2022-04-04 18:52:41.059  INFO 35352 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6d67dba2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-04 18:52:41.309  INFO 35352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-04 18:52:41.332  INFO 35352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-04 18:52:41.332  INFO 35352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-04-04 18:52:41.453  INFO 35352 --- [main] o.a.c.c.C.[.[.[/info-covid-api]          : Initializing Spring embedded WebApplicationContext
+2022-04-04 18:52:41.454  INFO 35352 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1787 ms
+2022-04-04 18:52:41.638  WARN 35352 --- [main] com.zaxxer.hikari.HikariConfig           : {} - idleTimeout has been set but has no effect because the pool is operating as a fixed size pool.
+2022-04-04 18:52:41.639  INFO 35352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-04 18:52:43.877  INFO 35352 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-04 18:52:43.936  INFO 35352 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2022-02-28 18:27:27.273  INFO 32304 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
-2022-02-28 18:27:27.275  INFO 32304 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2022-02-28 18:27:27.447  INFO 32304 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2022-02-28 18:27:27.644  INFO 32304 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2022-02-28 18:27:27.665  INFO 32304 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
-2022-02-28 18:27:27.672  INFO 32304 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@16e07bae
-2022-02-28 18:27:39.001  INFO 32304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-02-28 18:27:39.253  WARN 32304 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-02-28 18:27:39.598  INFO 32304 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2022-02-28 18:27:39.946  INFO 32304 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2022-02-28 18:27:39.967  WARN 32304 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-02-28 18:27:39.968  INFO 32304 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-02-28 18:27:39.973  WARN 32304 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-02-28 18:27:39.973  INFO 32304 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-02-28 18:27:40.109  INFO 32304 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-02-28 18:27:40.738  INFO 32304 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2022-02-28 18:27:40.756  INFO 32304 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-02-28 18:27:40.785  INFO 32304 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-02-28 18:27:40.935  INFO 32304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/info-covid-api'
-2022-02-28 18:27:40.937  INFO 32304 --- [main] co.edu.udea.infocovid.App                : Started App in 19.471 seconds (JVM running for 20.705)
-2022-02-28 18:28:11.832  INFO 32304 --- [Thread-44] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-02-28 18:28:11.839  INFO 32304 --- [Thread-44] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-02-28 18:28:11.844  INFO 32304 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-02-28 18:28:11.854  INFO 32304 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-04 18:52:44.026  INFO 35352 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2022-04-04 18:52:44.027  INFO 35352 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-04-04 18:52:44.225  INFO 35352 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-04-04 18:52:44.404  INFO 35352 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-04-04 18:52:44.425  INFO 35352 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2022-04-04 18:52:44.435  INFO 35352 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6313b441
+2022-04-04 18:52:55.069  INFO 35352 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-04 18:52:56.015  WARN 35352 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-04 18:52:56.130  INFO 35352 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-04-04 18:52:56.558  INFO 35352 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2022-04-04 18:52:56.990  INFO 35352 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-04 18:52:57.278  INFO 35352 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-04-04 18:52:57.325  INFO 35352 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-04-04 18:52:57.407  INFO 35352 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-04-04 18:52:57.783  INFO 35352 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/info-covid-api'
+2022-04-04 18:52:57.788  INFO 35352 --- [main] co.edu.udea.infocovid.App                : Started App in 18.735 seconds (JVM running for 19.931)
+2022-04-04 18:55:36.985  INFO 35352 --- [Thread-40] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-04 18:55:36.989  INFO 35352 --- [Thread-40] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-04 18:55:36.992  INFO 35352 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-04 18:55:37.000  INFO 35352 --- [Thread-40] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
