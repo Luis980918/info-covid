@@ -35,6 +35,7 @@ public class UsuarioController {
     public ResponseEntity<StandardResponse<UsuarioDTO>> guardarUsuario(@RequestBody UsuarioDTO user) {
         UsuarioDTO userDto = usuarioFacade.crearUsuario(user);
 		//halow
+		//halow x2
         return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK, userDto));    
     }
 
