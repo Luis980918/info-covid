@@ -34,6 +34,9 @@ public class UsuarioController {
             @ApiResponse(code = 500, message = "Error interno al procesar la respuesta")})
     public ResponseEntity<StandardResponse<UsuarioDTO>> guardarUsuario(@RequestBody UsuarioDTO user) {
         UsuarioDTO userDto = usuarioFacade.crearUsuario(user);
+		//halow
+		//halow x2
+		//halow x3
         return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK, userDto));    
     }
 
