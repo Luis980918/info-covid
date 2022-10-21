@@ -36,6 +36,7 @@ public class UsuarioController {
         UsuarioDTO userDto = usuarioFacade.crearUsuario(user);
 		//halow
 		//halow x2
+		//halow x3
         return ResponseEntity.ok(new StandardResponse<>(StandardResponse.StatusStandardResponse.OK, userDto));    
     }
 
